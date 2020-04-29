@@ -10,6 +10,12 @@ from utils.parse_command_line_args import parse_command_line_args
 
 
 def send_record(args):
+    if args.record_value is None:
+        raise AttributeError("--record-value is not provided.")
+
+    if args.schema_file is None:
+        raise AttributeError("--schema-file is not provided.")
+
     key_schema, value_schema = load_avro_schema_from_file(args.schema_file)
 
     producer_config = {
