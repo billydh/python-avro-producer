@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  pythonavroproducer:
+    image: pythonavroproducer
+    build:
+      context: .
+      dockerfile: ./Dockerfile
