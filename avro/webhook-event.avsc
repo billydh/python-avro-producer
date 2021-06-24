@@ -1,0 +1,32 @@
+{
+  "namespace": "com.compass.notification.events.webhook.v1",
+  "type": "record",
+  "name": "WebhookEvent",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      }
+    },
+    {
+      "name": "origin",
+      "type": {
+        "name": "EventOrigin",
+        "type":"enum",
+        "symbols": [
+          "TWILIO"
+        ]
+      }
+    },
+    {
+      "name": "parameters",
+      "type": {
+        "type": "map",
+        "values" : "string",
+        "default": {}
+      }
+    }
+  ]
+}

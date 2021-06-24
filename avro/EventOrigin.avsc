@@ -1,0 +1,9 @@
+{
+    "namespace": "com.compass.notification.events.webhook.v1",
+    "name": "EventOrigin",
+    "type":"enum",
+    "symbols": [
+      "TWILIO"
+    ]
+  }
+  
